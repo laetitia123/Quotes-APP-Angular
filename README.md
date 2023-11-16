@@ -16,8 +16,8 @@ Login ID (used to log in): {{$user->loginID}}
 
 This password reset link will expire in 60 minutes.<br>
 This email was generated from a user clicking on the ‘request ID/PW reset’ link during the login at {{$application->app_name ?? "Murugo.Cloud"}}. No further action is required if you did not request a password reset.
-<br><br><br><br>
-Regards,<br><br>
-MurugoCloud Service Team<br><br><br><br>
+<br><br>
+Regards,<br>
+MurugoCloud Service Team<br><br><br>
 If you’re having trouble clicking the “Reset Password” button, copy and paste the URL below into your web browser:<br><br>
 <a href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}" class="btn btn-link resetpwd-button">{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}</a>

@@ -11,7 +11,7 @@ Second Name : {{$user->legal_second_name}}
 <br>
 Login ID (used to log in): {{$user->loginID}}
 
-<button><a href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}">Reset Password</a></button>
+<button href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}">Reset Password</button>
 
 This password reset link will expire in 60 minutes.<br>
 This email was generated from a user clicking on the ‘request ID/PW reset’ link during the login at {{$application->app_name ?? "Murugo.Cloud"}}. No further action is required if you did not request a password reset.

@@ -10,9 +10,8 @@ First Name : {{$user->legal_first_name}}
 Second Name : {{$user->legal_second_name}}
 <br>
 Login ID (used to log in): {{$user->loginID}}
-<a href="#" style="background-color: #4CAF50; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px; font-size: 16px; margin: 4px 2px; cursor: pointer;"> Click me</a>
 
-<button href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}" style="color:red">Reset Password</button>
+<button><a href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}" class="btn resetpwd-button-link">Reset Password</a></button>
 
 This password reset link will expire in 60 minutes.<br>
 This email was generated from a user clicking on the ‘request ID/PW reset’ link during the login at {{$application->app_name ?? "Murugo.Cloud"}}. No further action is required if you did not request a password reset.

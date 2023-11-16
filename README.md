@@ -4,11 +4,11 @@ You are receiving this email because you requested more information to help you 
 Here is that info with instructions to help you log in below. Your Murugo.Cloud User Info:
 <br><br>
 Murugo Name : {{$user->name}}
-<br><br>
+<br>
 First Name : {{$user->legal_first_name}}
-<br><br>
+<br>
 Second Name : {{$user->legal_second_name}}
-<br><br>
+<br>
 Login ID (used to log in): {{$user->loginID}}
 
 <button><a href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}" class="btn resetpwd-button-link">Reset Password</a></button>

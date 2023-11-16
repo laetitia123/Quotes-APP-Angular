@@ -19,5 +19,5 @@ This email was generated from a user clicking on the ‘request ID/PW reset’ l
 <br><br>
 Regards,<br>
 MurugoCloud Service Team<br><br><br>
-If you’re having trouble clicking the “Reset Password” button, copy and paste the URL below into your web browser:<br><br>
+If you’re having trouble clicking the “Reset Password” button, copy and paste the URL below into your web browser:<br>
 <a href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}" class="btn btn-link resetpwd-button">{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}</a>

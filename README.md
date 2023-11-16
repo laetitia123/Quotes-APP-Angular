@@ -1,5 +1,5 @@
 
-## Hello {{$user->legal_first_name}}
+# Hello {{$user->legal_first_name}}
 You are receiving this email because you requested more information to help you log into one of the MurugoCloud websites or services.
 Here is that info with instructions to help you log in below.
 Your Murugo.Cloud User Info:

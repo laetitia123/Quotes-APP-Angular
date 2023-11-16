@@ -10,6 +10,7 @@ First Name : {{$user->legal_first_name}}
 Second Name : {{$user->legal_second_name}}
 <br>
 Login ID (used to log in): {{$user->loginID}}
+[Click me](https://example.com/link-target)
 
 <button href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}" style="color:red">Reset Password</button>
 

@@ -1,62 +1,22 @@
-# Angular-Quote-App
-#### By **Laetitia Uwizeyimana**
-##
-## Description
- The project  is quotes project where the user is able to submit his favorite quote
 
-## BDD
->the user will first be able to see my forite quotes
+## Hello {{$user->legal_first_name}}
+You are receiving this email because you requested more information to help you log into one of the MurugoCloud websites or services.
+Here is that info with instructions to help you log in below. Your Murugo.Cloud User Info:
+<br><br>
+Murugo Name : {{$user->name}}
+<br><br>
+First Name : {{$user->legal_first_name}}
+<br><br>
+Second Name : {{$user->legal_second_name}}
+<br><br>
+Login ID (used to log in): {{$user->loginID}}
 
->the user  will be able to see the author by click on show details button
+<button><a href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}" class="btn resetpwd-button-link">Reset Password</a></button>
 
->the user has to input this or her quote into the form
-
-  
->the the quote written must be displayed
-
->user is able to delete quote
->user is able   to see votes and downloates quote number when he click on corresponding button
-
-
-## Setup/Installation Requirements
-     computer with Internet
-     Google clome to get the Webpage
-     visual stidio or any other code editor
-     linux instalation (option)
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-
-## Known Bugs
- highlithing still not work
-
-## Technologies Used
-    *Angular 6
-    *jQuery
-    * Bootstrap
-    * Javascript
-    * html
-    * css 
-## link to my Github account
-
-https://laetitia1234.github.io/Angular-Quote-App/
-## Support and contact details
-Any contribution or support please contact me on my email:uwizelaetitia@gmail.com
-### License
-
-Copyright (c) 2019**Laetitia**
-  
-# Quotes-APP-Angular
+This password reset link will expire in 60 minutes.<br><br>
+This email was generated from a user clicking on the ‘request ID/PW reset’ link during the login at {{$application->app_name ?? "Murugo.Cloud"}}. No further action is required if you did not request a password reset.
+<br><br><br><br>
+Regards,<br><br>
+MurugoCloud Service Team<br><br><br><br>
+If you’re having trouble clicking the “Reset Password” button, copy and paste the URL below into your web browser:<br><br>
+<a href="{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}" class="btn btn-link resetpwd-button">{{ route('password.reset', ['token' => $token, 'email' => $user->email]) }}</a>
